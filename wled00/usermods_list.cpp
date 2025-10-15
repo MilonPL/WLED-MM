@@ -11,6 +11,8 @@
  */
 //#include "../usermods/EXAMPLE_v2/usermod_v2_example.h"
 
+#include "../usermods/FSR_Trigger/usermod_fsr_trigger.h"
+
 #ifdef USERMOD_BATTERY
 #include "../usermods/Battery/usermod_v2_Battery.h"
 #endif
@@ -408,6 +410,8 @@ void registerUsermods()
 #ifdef USERMOD_AUTO_PLAYLIST
   usermods.add(new AutoPlaylistUsermod(false));
 #endif
+
+usermods.add(new FsrTriggerUsermod());
 
 
 }
